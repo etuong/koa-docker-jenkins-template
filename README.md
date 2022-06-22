@@ -4,5 +4,21 @@ Koa is a web framework that aims to be a small, expressive, and robust foundatio
 
 ### To start
 1. Clone repo
+1. Run `npm run start`
+
+### To dockerize
 1. Build Docker image `docker build -t {tag} .`
 1. Run Docker image `docker run -p 1234:{PORT} -e PORT={PORT} {tag}`
+
+### To wire up with Jenkins
+1. docker run -p 8080:8080 --user root -v jenkins_home:/var/jenkins_home jenkins/jenkins
+1. Manage Git plugin and create a freestyle project pointing to this repo
+1. ```bash
+    apt-get update -y
+    apt-get install npm -y
+    npm install -y
+    npm run test
+    heroku git:remote -a mary-daniel
+    ```
+1. Use ngrok to expose localhost:8080 on the internet to trigger Jenkins upon a Github event `ngrok http 8080`
+1. Create a Webhook on the Github repo from the Jenkins ngrok URL. Be sure to concatenate /github-webhook/ with application/json as the content type.

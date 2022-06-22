@@ -22,3 +22,4 @@ Koa is a web framework that aims to be a small, expressive, and robust foundatio
     ```
 1. Use ngrok to expose localhost:8080 on the internet to trigger Jenkins upon a Github event `ngrok http 8080`
 1. Create a Webhook on the Github repo from the Jenkins ngrok URL. Be sure to concatenate /github-webhook/ with application/json as the content type.
+1. Add Heroku Git to Jenkins e.g `https://git.heroku.com/{APP}.git` and authenticate using your API key

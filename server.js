@@ -15,6 +15,12 @@ router.get('/', async ctx => {
   ctx.body = `<h1>Hello ${name}!</h1>`;
 });
 
+router.get('/happy', async ctx => {
+  ctx.set('Content-Type', 'text/html')
+  ctx.status = 200;
+  ctx.body = `<h1 style="color:red;">I am such a happy dog, woof!</h1>`;
+});
+
 router.get('/secret', async ctx => {
   ctx.redirect('test.html')
 })

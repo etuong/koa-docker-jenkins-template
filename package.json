@@ -1,7 +1,7 @@
 {
   "name": "ethan",
   "version": "0.0.1",
-  "description": "Ethan's Sandbox for Koa web framework",
+  "description": "Koa, Docker, Jenkins Template",
   "author": {
     "name": "Ethan Uong"
   },

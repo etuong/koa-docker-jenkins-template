@@ -12,7 +12,7 @@ router.get('/', async ctx => {
   const name = ctx.query.name || 'stranger';
   ctx.set('Content-Type', 'text/html')
   ctx.status = 200;
-  ctx.body = `<h1>Good bye ${name}!</h1>`;
+  ctx.body = `<h1>Hello ${name}!</h1>`;
 });
 
 router.get('/happy', async ctx => {
@@ -22,7 +22,7 @@ router.get('/happy', async ctx => {
 });
 
 router.get('/secret', async ctx => {
-  ctx.redirect('test.html')
+  ctx.redirect('demo.html')
 })
 
 app

@@ -1,4 +1,8 @@
-# Koa starter app with Docker
+# Koa starter app with Docker and Jenkins
+
+This repo bootstraps Koa with Docker and Jenkins.
+
+Docker allows virtualization and Jenkins assists with automation.
 
 Koa is a web framework that aims to be a small, expressive, and robust foundation for web applications and APIs. It's like Express.js but also supports async functions! Koa is a bit less opinionated than Express especially on how it handles middleware, thus more modular or customizable. This repo is a simple Koa starter with a Dockerfile for containerization.
 
